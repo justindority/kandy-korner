@@ -18,13 +18,25 @@ export const NavBar = () => {
                 kandyUserObject.staff 
                 
                 ?
-                
+                <>
                 <li className="navbar__item active">
                 <Link className="navbar__link" to="/products">Products</Link>
                 </li>
-
+                <li className="navbar__item active">
+                <Link className="navbar__link" to="/employees">Employee List</Link>
+                </li>
+                <li className="navbar__item active">
+                <Link className="navbar__link" to="/hiringForm">Hire an Employee</Link>
+                </li>
+                <li className="navbar__item active">
+                <Link className="navbar__link" to="/customers">Customers</Link>
+                </li>
+                </>
             :
-                ""
+                
+                <li className="navbar__item active">
+                <Link className="navbar__link" to="/candySearch">Find Candy</Link>
+                </li>
 
             }
 

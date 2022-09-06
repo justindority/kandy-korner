@@ -104,7 +104,7 @@ export const ProductForm = () => {
                             value={0}
                             >Choose Product Type</option>
                             {
-                                productTypes.map(p => <option value={p.id}>{p.type}</option>)
+                                productTypes.map(p => <option key={p.id} value={p.id}>{p.type}</option>)
                             }
 
                         </select>

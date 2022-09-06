@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { Product } from "./Product"
 import "./products.css"
 
 
@@ -53,19 +54,8 @@ export const ProductList = () => {
     <h2>List of Products</h2>
     <article className="products">
     <button onClick={() => navigate("/product/create")}>Create Product</button>
-
-    {
-        filteredProducts.map(product => {
-            return <section className="product">
-                <header>Product: {product.name}</header>
-                <p>Price: {product.price}</p>
-                <footer>Type: {product.productTypes.type}</footer>
-            </section>
-        })
-    }
+    <Product filteredProducts={filteredProducts} />
     </article>
 
     </>
-
-
 }

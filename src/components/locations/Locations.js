@@ -29,7 +29,7 @@ export const LocationList = () => {
     <article className="locations">
     {
         locations.map(location => {
-            return <section className="location">
+            return <section className="location" key={location.id}>
                 <header>Location: {location.address}
                 <p>{location.city}, {location.state}</p>
                 </header>
